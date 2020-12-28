@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+{% endblock %}
+
+{% block content %}
+<div style="padding: 20px;" class="container">
+    <h2 style="font-family: 'Times New Roman', Times, serif;">CATEGORIES</h2>
+    {% for category in category %}
+        
+        <div >
+            <li><a style="color: rgb(8, 8, 8);text-decoration: none; font-family: 'Times New Roman', Times, serif; " href="{% url 'show_products' category.id %}">{{category|title}}</a></li>  
+        </div>
+    {% endfor %} 
+
+</div> 
+    
+{% endblock %}
